@@ -26,11 +26,6 @@
         });
     </script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-    <style>
-        [class*="ground-pane"] {
-            filter: grayscale(1);
-        }
-    </style>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blanchard - художественная галерея</title>
@@ -40,15 +35,15 @@
         <header class="header">
             <div class="header-top">
                 <div class="container-king header-top__container">
-                    <div class="logo header-top__logo">
+                    <a href="" class="logo header-top__logo">
                         <img alt="logo" src="images/hero-header/logo.svg">
-                    </div>
+                    </a>
                     <nav class="header-top__nav">
                         <ul id="menu" class="header-top__list">
                             <li class="header-top__item">
                                 <a href="#abouts-us">
                                     О нас
-                                </a>
+                                </a>                                
                             </li>
                             <li class="header-top__item">
                                 <a href="#gallery">
@@ -94,10 +89,13 @@
                 <div class="container-king header-bottom__container">
                     <ul class="header-bottom__list">
                         <li class="header-bottom__item">
-                            <a>
+                            <button class="header-bottom__btn" data-path="realizm">
                                 Реализм
-                            </a>   
-                            <div class="header-bottom__hidden">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                                </svg>                                
+                            </button>   
+                            <div class="header-bottom__hidden" data-target="realizm">
                                 <ul class="header-bottom__hidden-list">
                                     <li class="header-bottom__hidden-item" style="background-image: url('images/hero-header/hidden/1-1.png');">
                                         Тинторетто
@@ -127,10 +125,13 @@
                             </div>                         
                         </li>
                         <li class="header-bottom__item">
-                            <a>
+                            <button class="header-bottom__btn" data-path="impressionism">
                                 Импрессионизм
-                            </a>     
-                            <div class="header-bottom__hidden">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                                </svg> 
+                            </button>     
+                            <div class="header-bottom__hidden" data-target="impressionism">
                                 <ul class="header-bottom__hidden-list">
                                     <li class="header-bottom__hidden-item" style="background-image: url('images/hero-header/hidden/2-1.png');">
                                         Моне
@@ -160,10 +161,13 @@
                             </div>                              
                         </li>
                         <li class="header-bottom__item">
-                            <a>
+                            <button class="header-bottom__btn" data-path="post-impressionism">
                                 Постимпрессионизм
-                            </a> 
-                            <div class="header-bottom__hidden">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                                </svg> 
+                            </button> 
+                            <div class="header-bottom__hidden" data-target="post-impressionism">
                                 <ul class="header-bottom__hidden-list">
                                     <li class="header-bottom__hidden-item" style="background-image: url('images/hero-header/hidden/3-1.png');">
                                         Ван Гог
@@ -193,10 +197,13 @@
                             </div>     
                         </li>
                         <li class="header-bottom__item">
-                            <a>
+                            <button class="header-bottom__btn" data-path="avant-garde">
                                 Авангард
-                            </a>
-                            <div class="header-bottom__hidden">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                                </svg> 
+                            </button>
+                            <div class="header-bottom__hidden" data-target="avant-garde">
                                 <ul class="header-bottom__hidden-list">
                                     <li class="header-bottom__hidden-item" style="background-image: url('images/hero-header/hidden/4-1.png');">
                                         Кандинский
@@ -226,10 +233,13 @@
                             </div>  
                         </li>
                         <li class="header-bottom__item">
-                            <a>
+                            <button class="header-bottom__btn" data-path="futurism">
                                 Футуризм
-                            </a>    
-                            <div class="header-bottom__hidden">
+                                <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11 1L6 6L1 1" stroke="white"/>
+                                </svg> 
+                            </button>    
+                            <div class="header-bottom__hidden" data-target="futurism">
                                 <ul class="header-bottom__hidden-list">
                                     <li class="header-bottom__hidden-item" style="background-image: url('images/hero-header/hidden/5-1.png');">
                                         Карра
@@ -259,31 +269,6 @@
                             </div>                      
                         </li>
                     </ul>
-                    <script>
-                        var art_style = document.getElementsByClassName('header-bottom__item');
-                        for (var i=0; i<art_style.length; i++) {
-                            art_style[i].addEventListener('mouseenter', showHidden, false);
-                            art_style[i].addEventListener('mouseleave', hideHidden, false);
-                        }
-                        function showHidden(art_style) {
-                            if (this.children.length>1) {
-                                this.children[1].style.height = "300px";
-                                this.children[1].style.overflow = "visible";
-                                this.children[1].style.opacity = "1";
-                            } else {
-                                return false;
-                            }
-                        }
-                        function hideHidden(art_style) {
-                            if (this.children.length>1) {
-                                this.children[1].style.height = "0px";
-                                this.children[1].style.overflow = "hidden";
-                                this.children[1].style.opacity = "0";
-                            } else {
-                                return false;
-                            }
-                        }
-                    </script>
                     <div class="header-bottom__search">
                         <form action="">
                             <button type="submit">
@@ -322,12 +307,14 @@
     <main>
         <section class="about-us" id="abouts-us">
             <div class="container-king">
-                <h2 class="header-two about-us__header">
-                    О нас
-                </h2>
-                <p>
-                    Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
-                </p>
+                <div class="about-us__content">
+                    <h2 class="header-two about-us__header">
+                        О нас
+                    </h2>
+                    <p>
+                        Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов. Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс внедрения и модернизации модели развития. Повседневная практика показывает, что высокое качество позиционных исследований создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов. В рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность среди определенных слоев населения, а значит, должны быть разоблачены.
+                    </p>
+                </div>
             </div>
         </section>
         <section class="gallery" id="gallery">
@@ -977,16 +964,6 @@
                 </div>
             </div>
             <!-- <script src="js/doings.js"></script> -->
-            <script>
-                var doings_btn = document.getElementById("doings__btn");
-                var doings_hidden_items = document.getElementsByClassName("doings__item");
-                doings_btn.onclick = function() {
-                    doings_btn.style.display = "none";
-                    for (var i=3; i<doings_hidden_items.length;i+=1) {
-                        doings_hidden_items[i].style.display = "block";
-                    }
-                }
-            </script>
         </section>
         <section class="editions" id="editions">
             <div class="container-king">
@@ -1384,77 +1361,12 @@
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script> 
-
     <script src="js/just-validate.js"></script>
     <script src="js/inputmask.min.js"></script>
-    <script>
-        var selector = document.querySelector("input[type='tel']");
-        var im = new Inputmask("+7 ( 999 ) 999-99-99");
-
-        im.mask(selector);
-
-        new JustValidate('.form', {
-            rules: {
-                name: {
-                    required: true,
-                    minLength: 2,
-                    maxLength: 30
-                },
-                tel: {
-                    required: true,
-                    function: (name, value) => {
-                        const phone = selector.inputmask.unmaskedvalue()
-                        console.log(phone)
-                        return Number(phone) && phone.length === 10
-                    }
-                },
-            },
-            messages: {
-                name: {
-                    required: 'Как вас зовут?'
-                },
-                tel: {
-                    required: 'Укажите ваш телефон'
-                },
-            }   
-        });
-    </script>
-
-    <script type="text/javascript">
-        ymaps.ready(init);
-        function init(){
-            var myMap = new ymaps.Map("map", {
-                center: [55.758495, 37.601719],
-                zoom: 15.5
-            });
-            var myPlacemark = new ymaps.Placemark([55.758495, 37.601719], {}, {
-                iconLayout: 'default#image',
-                iconImageHref: 'images/contacts/place.svg',
-                iconImageSize: [28, 40],
-                iconImageOffset: [-5, -38]
-            }); 
-            myMap.geoObjects.add(myPlacemark) 
-        }
-    </script>
-
-    <!-- планый переход по ссылке -->
-    <script type="text/javascript">
-        $(document).ready(function(){
-           $("#menu").on("click","a", function (event) {
-               event.preventDefault();
-               var id  = $(this).attr('href'),
-                   top = $(id).offset().top;
-               $('body,html').animate({scrollTop: top}, 950);
-           });
-           $("#newsletter").on("click","a", function (event) {
-               event.preventDefault();
-               var id  = $(this).attr('href'),
-                   top = $(id).offset().top;
-               $('body,html').animate({scrollTop: top}, 950);
-           });
-       });
-    </script>
-    <!--  -->
-
+    <script src="js/validator.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/ast-style.js"></script>
+    <script src="js/doings-btn.js"></script>
 </body>
 </html>
