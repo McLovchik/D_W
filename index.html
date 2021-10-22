@@ -7,24 +7,9 @@
     <link rel="stylesheet" href="styles/choices.css">
     <link rel="stylesheet" href="styles/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/style.css">
-
     <link rel="stylesheet" href="styles/jquery-ui.css">
-    <!-- <link rel="stylesheet" href="/resources/demos/style.css"> -->
     <script src="js/jquery-1.12.4.js"></script>
     <script src="js/jquery-ui.js"></script>
-    <script>
-        $( function() {
-          $( "#catalog__accordion-italy" ).accordion({
-            collapsible: true,
-          });
-        });
-
-        $( function() {
-          $( "#catalog__accordion-germany" ).accordion({
-            collapsible: true,
-          });
-        });
-    </script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -331,19 +316,6 @@
                                 <option value="direction">Направление</option>
                                 <option value="technics">Техника</option>
                             </select>
-                            <script src="js/choices.js"></script>
-                            <script>
-                                
-                            </script>
-                            <script>
-                                const element = document.querySelector('#selectCustom');
-                                const choices = new Choices(element, {
-                                    searchEnabled: false,
-                                    classNames: {
-                                        // highlightedState: 'no-highlighted',
-                                    }
-                                })
-                            </script>
                         </div>
                     </div>
                     <p>
@@ -548,30 +520,7 @@
                                 </button>
                                 <div class="catalog__accordion">
                                     <ul class="catalog__name-list">
-                                        <!-- <li class="catalog__name">Бенедетто ди Биндо</li>
-                                        <li class="catalog__name">Бергоньоне, Амброджо</li>
-                                        <li class="catalog__name">Биссоло, Франческо</li>
-                                        <li class="catalog__name">Больтраффио, Джованни</li>
-                                        <li class="catalog__name">Бонсиньори, Франческо</li>
-                                        <li class="catalog__name">Боттичини, Рафаэлло</li>
-                                        <li class="catalog__name">Брамантино</li>
-                                        <li class="catalog__name">Бреа, Людовико</li>
-                                        <li class="catalog__name">Бьяджо д’Антонио Туччи</li>
-                                        <li class="catalog__name">Веккьетта</li>
-                                        <li class="catalog__name">Андреа Верроккьо</li>
-                                        <li class="catalog__name">Доменико Гирландайо</li>
-                                        <li class="catalog__name">Беноццо Гоццоли</li>
-                                        <li class="catalog__name">Граначчи, Франческо</li>
-                                        <li class="catalog__name">Грегорио ди Чекко</li>
-                                        <li class="catalog__name">Джованни да Удине</li>
-                                        <li class="catalog__name">Джованни ди Паоло</li>
-                                        <li class="catalog__name">Джорджоне</li>
-                                        <li class="catalog__name">Парентино, Бернардо</li>
-                                        <li class="catalog__name">Пезеллино</li>
-                                        <li class="catalog__name">Пьетро Перуджино</li>
-                                        <li class="catalog__name">Перуцци, Бальдассаре</li>
-                                        <li class="catalog__name">Пизанелло</li>
-                                        <li class="catalog__name">Пинтуриккьо</li> -->
+                                        
                                     </ul>
                                 </div>
                             </li>
@@ -924,8 +873,6 @@
                     </div>
                 </div>
             </div>
-            <script src="js/catalog-country-tabs.js"></script>
-            <script src="js/catalog-name-tabs.js"></script>
         </section>
         <section class="doings" id="doings">
             <div class="container-king">
@@ -1006,7 +953,6 @@
                     </a>
                 </div>
             </div>
-            <!-- <script src="js/doings.js"></script> -->
         </section>
         <section class="editions" id="editions">
             <div class="container-king">
@@ -1297,19 +1243,6 @@
                     <button class="projects__sw-btn projects__swiper-btn--next"></button>
                 </div>
             </div>
-            <script src="js/@popperjs-core@2.js"></script>
-            <script src="js/tippy.js@6.js"></script>
-            <script>
-                tippy('#editions__tooltip-1', {
-                    content: 'Пример современных тенденций - современная методология разработки',
-                });
-                tippy('#editions__tooltip-2', {
-                    content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции  ',
-                });
-                tippy('#editions__tooltip-3', {
-                    content: 'В стремлении повысить качество ',
-                });
-            </script>
         </section>
         <section class="contacts" id="contacts">
             <div class="container-king">
@@ -1403,6 +1336,11 @@
 
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/sliders.js"></script> 
+    <script src="js/choices.js"></script>
+    <script src="js/choices-settings.js"></script>
+    <script src="js/catalog-content-tabs.js"></script>
+    <script src="js/catalog-country-tabs.js"></script>
+    <script src="js/catalog-name-tabs.js"></script>
     <script src="js/just-validate.js"></script>
     <script src="js/inputmask.min.js"></script>
     <script src="js/validator.js"></script>
@@ -1410,5 +1348,8 @@
     <script src="js/smooth-scroll.js"></script>
     <script src="js/ast-style.js"></script>
     <script src="js/doings-btn.js"></script>
+    <script src="js/@popperjs-core@2.js"></script>
+    <script src="js/tippy.js@6.js"></script>
+    <script src="js/tooltip-settings.js"></script>
 </body>
 </html>
