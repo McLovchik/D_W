@@ -5,6 +5,7 @@ let gallerySlider = new Swiper(".gallery__swiper-content", {
   grid: {
     rows: 2
   },
+  // loop: true,
   spaceBetween: 30,
   pagination: {
     el: ".gallery__swiper-pagination",
@@ -23,16 +24,36 @@ let gallerySlider = new Swiper(".gallery__swiper-content", {
       },
       spaceBetween: 0
     },
-    576: {
+
+    900: {
       slidesPerView: 2,
       grid: {
         rows: 2
       },
-      spaceBetween: 30
+      spaceBetween: 34
     },
 
-    1200: {
+    1261: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      grid: {
+        rows: 2
+      },
+      spaceBetween: 54
+    },
+
+    // 1440: {
+    //   slidesPerView: 2,
+    //   slidesPerGroup: 2,
+    //   grid: {
+    //     rows: 2
+    //   },
+    //   spaceBetween: 54
+    // },
+
+    1751: {
       slidesPerView: 3,
+      slidesPerGroup: 3,
       grid: {
         rows: 2
       },
