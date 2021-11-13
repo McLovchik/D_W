@@ -19,13 +19,14 @@ let gallerySlider = new Swiper(".gallery__swiper-content", {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       grid: {
         rows: 1
       },
       spaceBetween: 0
     },
 
-    900: {
+    480: {
       slidesPerView: 2,
       grid: {
         rows: 2
@@ -33,16 +34,7 @@ let gallerySlider = new Swiper(".gallery__swiper-content", {
       spaceBetween: 34
     },
 
-    1261: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      grid: {
-        rows: 2
-      },
-      spaceBetween: 54
-    },
-
-    // 1440: {
+    // 1261: {
     //   slidesPerView: 2,
     //   slidesPerGroup: 2,
     //   grid: {
@@ -51,14 +43,23 @@ let gallerySlider = new Swiper(".gallery__swiper-content", {
     //   spaceBetween: 54
     // },
 
-    1751: {
+    1261: {
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      // slidesPerGroup: 3,
       grid: {
         rows: 2
       },
       spaceBetween: 50
-    }
+    },
+
+    // 1751: {
+    //   slidesPerView: 3,
+    //   slidesPerGroup: 3,
+    //   grid: {
+    //     rows: 2
+    //   },
+    //   spaceBetween: 50
+    // }
   },
 
   a11y: {

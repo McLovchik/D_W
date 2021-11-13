@@ -60,9 +60,15 @@
 
 let intervalId;
 
+// const header_bottom__hidden_item = document.querySelectorAll('.header-bottom__hidden-item');
+// header_bottom__hidden_item.inert = true;
+
 document.querySelectorAll('.header-bottom__btn').forEach(e => {
     e.addEventListener('click', e => {
         const hidden = e.currentTarget.dataset.path;
+        // var keys = {
+        //     ESC: 27,
+        // }
         document.querySelectorAll('.header-bottom__hidden').forEach(e => {
             if (!document.querySelector(`[data-target=${hidden}]`).classList.contains('open')) {
                 e.classList.remove('header-bottom__hidden-active');
@@ -90,5 +96,7 @@ document.querySelectorAll('.header-bottom__btn').forEach(e => {
                 }
             }
         });
+
+        // if 
     });
 });

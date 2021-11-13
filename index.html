@@ -36,23 +36,17 @@
         <header class="header">
             <div class="header-top">
                 <div class="container-king header-top__container">
-                    <button style="transform: translateY(2px);" class="burger-open" id="burger-open">
-                        <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
-                            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
-                            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
-                        </svg>
-                    </button>
                     <a href="" class="logo header-top__logo">
                         <picture>
-                            <source media="(max-width: 1260px)" srcset="images/hero-header/logo1024.svg">
-                            <source media="(min-width: 1261px)" srcset="images/hero-header/logo.svg">
-                            <img alt="logo" src="images/hero-header/logo.svg">
+                            <source media="(max-width: 434px)" srcset="images/hero-header/logo-320.svg">
+                            <source media="(max-width: 1306px)" srcset="images/hero-header/logo1024.svg">
+                            <source media="(min-width: 1306px)" srcset="images/hero-header/logo.svg">
+                            <img alt="Логотип" src="images/hero-header/logo.svg">
                         </picture>
                     </a>
                     <ul id="menu" class="header-top__list">
                         <li class="header-top__item">
-                            <a class="a-ui" href="#abouts-us">
+                            <a class="a-ui" href="#about-us">
                                 О нас
                             </a>                                
                         </li>
@@ -97,6 +91,13 @@
             </div>
             <div class="header-bottom">
                 <div class="container-king header-bottom__container">
+                    <button style="transform: translateY(2px);" class="burger-open" id="burger-open" aria-label="Открыть">
+                        <svg width="36" height="29" viewBox="0 0 36 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white"/>
+                            <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white"/>
+                            <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white"/>
+                        </svg>
+                    </button>
                     <ul class="header-bottom__list">
                         <li class="header-bottom__item">
                             <button class="header-bottom__btn" data-path="realizm">
@@ -279,16 +280,14 @@
                             </div>                      
                         </li>
                     </ul>
-                    <div>
-                        <div class="header-bottom__search" id="header-bottom__search">
-                            <button id="search_btn"> <!-- type="submit" -->
-                                <svg style="transform: translate(-5px, 4px);" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
-                                </svg> 
-                            </button>
-                            <input id="search_line" type="text" placeholder="Поиск по сайту">
-                        </div>
+                    <div class="header-bottom__search" id="header-bottom__search">
+                        <button id="search_btn" aria-label="Найти"> <!-- type="submit" -->
+                            <svg style="transform: translate(-5px, 4px);" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6.8678" height="1.71695" transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z" fill="white"/>
+                            </svg> 
+                        </button>
+                        <input id="search_line" type="text" placeholder="Поиск по сайту">
                     </div>
 
                 </div>
@@ -299,7 +298,7 @@
                 <div id="newsletter" class="hero__main">
                     <div class="hero__header-text">
                         <h1 class="hero__header">
-                            Прикоснитесь к прекрасному
+                            Прикоснитесь<br> к прекрасному
                         </h1>
                         <p class="hero__text">
                             Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий создаёт предпосылки для новых предложений.
@@ -315,7 +314,7 @@
         </section>
     </div>
     <main>
-        <section class="about-us" id="abouts-us">
+        <section class="about-us" id="about-us">
             <div class="container-king">
                 <div class="about-us__content">
                     <h2 class="header-two about-us__header">
@@ -336,7 +335,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666725 -0.000125032L15.3334 15.3041L14.6667 15.9998L5.76143e-05 0.695522L0.666725 -0.000125032Z" fill="black"/>
                         </svg>                            
                     </button>
-                    <div class="gallery__modal-image" style="background: url('images/gallery/first/modal.png');">
+                    <div class="gallery__modal-image">
 
                     </div>
                     <div class="gallery__modal-text">
@@ -374,20 +373,32 @@
                             </select>
                         </div>
                     </div>
-                    <p>
+                    <p class="gallery__left-text">
                         Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний <a href="" class="purple-text">авторизуйтесь</a>, либо воспользуйтесь лицензией. 
                     </p>
                 </div>
 
-                <div class="gallery__swiper-content">
+                <div class="swiper gallery__swiper-content">
 
                     <div class="swiper-btns">
-                        <button class="gallery__sw-btn gallery__swiper-btn--prev"></button>
+                        <button class="gallery__sw-btn gallery__swiper-btn--prev">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="swiper-btn-d" d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" fill="#666666"/>
+                                <path d="M15 30C6.71573 30 8.89561e-07 23.2843 1.25168e-06 15C1.61379e-06 6.71573 6.71573 -1.01779e-06 15 -6.55671e-07C23.2843 -2.93554e-07 30 6.71573 30 15C30 23.2843 23.2843 30 15 30Z" stroke="inherit"/>
+                                <path d="M16 20L11 15L16 10" stroke="white"/>
+                            </svg>                            
+                        </button>
                         <div class="gallery__swiper-pagination"></div>
-                        <button class="gallery__sw-btn gallery__swiper-btn--next"></button>
+                        <button class="gallery__sw-btn gallery__swiper-btn--next">
+                            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path class="swiper-btn-d" d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" fill="#666666"/>
+                                <path d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 -1.01779e-06 15 -6.55671e-07C6.71573 -2.93554e-07 2.93554e-07 6.71573 6.55671e-07 15C1.01779e-06 23.2843 6.71573 30 15 30Z" stroke="inherit"/>
+                                <path d="M14 20L19 15L14 10" stroke="white"/>
+                            </svg>                            
+                        </button>
                     </div>
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide gallery-btn-for-modal" id="gallery__modal1-btn"> <!-- id="gallery__modal1-btn" -->
+                        <div class="swiper-slide gallery-btn-for-modal"> <!-- id="gallery__modal1-btn" -->
                             <picture>
                                 <img class="swiper-slide--img" src="images/gallery/first/1.jpg" alt="изображение">
                             </picture>
@@ -397,7 +408,7 @@
                                 <img class="swiper-slide--img" src="images/gallery/first/2.png" alt="изображение">
                             </picture>
                         </div>
-                        <div class="swiper-slide">
+                        <div class="swiper-slide" id="gallery__modal1-btn">
                             <picture>
                                 <img class="swiper-slide--img" src="images/gallery/first/3.jpg" alt="изображение">
                             </picture>
@@ -1391,6 +1402,7 @@
         </div>
     </footer> -->
 
+    <script src="js/inert.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/burger.js"></script>
     <script src="js/search.js"></script>

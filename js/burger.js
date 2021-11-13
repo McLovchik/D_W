@@ -3,19 +3,40 @@ var burger_open = document.getElementById("burger-open");
 var burger_close = document.getElementById("burger-close");
 var burger_list = document.getElementById("menu");
 
-function myFunction(x) {
-    if (x.matches) { // Если медиа запрос совпадает
-        burger_open.onclick = function() {
-            burger.style.transform = "translateY(0)";
-            burger_list.style.transform = "translateY(0)";
-        }
-        burger_close.onclick = function() {
-            burger.style.transform = "translateY(-102%)";
-            burger_list.style.transform = "translateY(-150%)";
-        }
-    } 
+
+burger_open.onclick = function() {
+    burger.style.transform = "translateY(0)";
+    burger_list.style.transform = "translateY(0)";
 }
+burger_close.onclick = function() {
+    burger.style.transform = "translateY(-102%)";
+    burger_list.style.transform = "translateY(-150%)";
+}
+
+if (burger.style.display == "none") {
+    burger_list.style.transform = "translateY(0)";
+}
+
+// if (x.matches) {
+//     burger.style.transform = "translateY(0)";
+//     burger_list.style.transform = "translateY(0)"
+// }
+
+// var x = window.matchMedia("(min-width: 1306px)");
+
+// function myFunction(x) {
+//     if (x.matches) { // Если медиа запрос совпадает
+//         burger_open.onclick = function() {
+//             burger.style.transform = "translateY(0)";
+//             burger_list.style.transform = "translateY(0)";
+//         }
+//         burger_close.onclick = function() {
+//             burger.style.transform = "translateY(-102%)";
+//             burger_list.style.transform = "translateY(-150%)";
+//         }
+//     } 
+// }
   
-var x = window.matchMedia("(max-width: 1260px)");
-myFunction(x); // Вызов функции прослушивателя во время выполнения
+// var x = window.matchMedia("(max-width: 1260px)");
+// myFunction(x); // Вызов функции прослушивателя во время выполнения
 // x.addListener(myFunction); // Присоединить функцию прослушивателя при изменении состояния
