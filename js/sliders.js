@@ -240,3 +240,4 @@ let projectsSlider = new Swiper(".projects__swiper-content", {
 //     prevEl: ".swiper-button-prev3",
 //   },
 // });
+
