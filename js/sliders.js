@@ -77,12 +77,14 @@ let gallerySlider = new Swiper(".gallery__swiper-content", {
   // }
 });
 
+
 let editionsSlider = new Swiper(".editions__swiper-content", {
   slidesPerView: 3,
   slidesPerGroup: 3,
   grid: {
     rows: 1
   },
+  // loop: true,
   spaceBetween: 30,
   pagination: {
     el: ".editions__swiper-pagination",
@@ -95,27 +97,56 @@ let editionsSlider = new Swiper(".editions__swiper-content", {
 
   breakpoints: {
     320: {
-      slidesPerView: 1,
+      slidesPerView: 2,
+      slidesPerGroup: 2,
       grid: {
         rows: 1
       },
-      spaceBetween: 0
-    },
-    576: {
-      slidesPerView: 2,
-      grid: {
-        rows: 2
-      },
-      spaceBetween: 30
+      spaceBetween: 15
     },
 
-    1200: {
-      slidesPerView: 3,
+    670: {
+      slidesPerView: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 34
+    },
+
+    880: {
+      slidesPerView: 2,
       grid: {
         rows: 1
       },
       spaceBetween: 50
-    }
+    },
+
+    // 1261: {
+    //   slidesPerView: 2,
+    //   slidesPerGroup: 2,
+    //   grid: {
+    //     rows: 2
+    //   },
+    //   spaceBetween: 54
+    // },
+
+    1306: {
+      slidesPerView: 3,
+      // slidesPerGroup: 3,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    },
+
+    // 1751: {
+    //   slidesPerView: 3,
+    //   slidesPerGroup: 3,
+    //   grid: {
+    //     rows: 2
+    //   },
+    //   spaceBetween: 50
+    // }
   },
 
   a11y: {
@@ -132,40 +163,6 @@ let editionsSlider = new Swiper(".editions__swiper-content", {
   //   }
   // }
 });
-
-// var swiper1 = new Swiper(".mySwiper1", {
-//   pagination: {
-//     el: ".swiper-pagination1",
-//     type: "fraction",
-//   },
-//   grid: {
-//     rows: 2,
-//   },
-//   loop: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next1",
-//     prevEl: ".swiper-button-prev1",
-//   },
-//   slidesPerView: 3,
-//   slidesPerGroup: 3,
-// });
-
-// var swiper2 = new Swiper(".mySwiper2", {
-//   pagination: {
-//     el: ".swiper-pagination2",
-//     type: "fraction",
-//   },
-//   grid: {
-//     rows: 1,
-//   },
-//   loop: true,
-//   navigation: {
-//     nextEl: ".swiper-button-next2",
-//     prevEl: ".swiper-button-prev2",
-//   },
-//   slidesPerView: 3,
-// });
-
 
 
 let projectsSlider = new Swiper(".projects__swiper-content", {
@@ -187,20 +184,32 @@ let projectsSlider = new Swiper(".projects__swiper-content", {
   breakpoints: {
     320: {
       slidesPerView: 1,
+      slidesPerGroup: 1,
       grid: {
         rows: 1
       },
       spaceBetween: 0
     },
-    576: {
+
+    400: {
       slidesPerView: 2,
+      slidesPerGroup: 2,
       grid: {
-        rows: 2
+        rows: 1
       },
-      spaceBetween: 30
+      spaceBetween: 34
     },
 
-    1200: {
+    880: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      grid: {
+        rows: 1
+      },
+      spaceBetween: 50
+    },
+
+    1305: {
       slidesPerView: 3,
       grid: {
         rows: 1
@@ -223,21 +232,3 @@ let projectsSlider = new Swiper(".projects__swiper-content", {
   //   }
   // }
 });
-
-
-// var swiper3 = new Swiper(".mySwiper3", {
-//   slidesPerView: 3,
-//   spaceBetween: 30,
-//   slidesPerGroup: 1,
-//   loop: true,
-//   loopFillGroupWithBlank: true,
-//   pagination: {
-//     el: ".swiper-pagination3",
-//     clickable: true,
-//   },
-//   navigation: {
-//     nextEl: ".swiper-button-next3",
-//     prevEl: ".swiper-button-prev3",
-//   },
-// });
-
